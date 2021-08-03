@@ -7,11 +7,11 @@ const { defaultEmailHandlers, EmailPlugin } = require("@vendure/email-plugin");
 const { AssetServerPlugin } = require("@vendure/asset-server-plugin");
 const { AdminUiPlugin } = require("@vendure/admin-ui-plugin");
 const path = require("path");
-require('dotenv').config()
+require("dotenv").config();
 
 const config = {
     apiOptions: {
-        port: 4000,
+        port: 8080,
         adminApiPath: "admin-api",
         adminApiPlayground: {
             settings: {
@@ -32,9 +32,9 @@ const config = {
             identifier: "superadmin",
             password: "superadmin",
         },
-        tokenMethod: 'cookie',
+        tokenMethod: "cookie",
         cookieOptions: {
-          secret: process.env.COOKIE_SESSION_SECRET
+            secret: "mipalabrasuperremilsecretaIAN",
         },
         requireVerification: true,
     },
@@ -42,11 +42,11 @@ const config = {
         type: "mysql",
         synchronize: true, // turn this off for production
         logging: false,
-        database: "ian_ecommerce",
+        database: "vendureDev",
         host: "localhost",
         port: 3306,
-        username: "root",
-        password: "",
+        username: "ecommerce-vendure",
+        password: "ZuJR6nM!mNrTezk",
         migrations: [path.join(__dirname, "../migrations/*.ts")],
     },
     paymentOptions: {
