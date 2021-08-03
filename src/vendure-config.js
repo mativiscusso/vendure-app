@@ -43,7 +43,7 @@ const config = {
         synchronize: true, // turn this off for production
         logging: false,
         database: "vendureDev",
-        host: "localhost",
+        host: "aa18oj4ktbwqa7e.cldekbyx7m5c.us-east-1.rds.amazonaws.com",
         port: 3306,
         username: "ecommerce-vendure",
         password: "ZuJR6nM!mNrTezk",
