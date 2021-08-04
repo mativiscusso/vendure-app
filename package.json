@@ -7,7 +7,7 @@
         "run:worker": "node ./src/index-worker.js",
         "start": "concurrently yarn:run:*",
         "start:prod": "pm2 start node ./src/index.js && node ./src/index-worker.js",
-        "stop:prod": "pm2 stop vendure-app && index",
+        "stop:prod": "pm2 stop all",
         "migration:generate": "node migration generate",
         "migration:run": "node migration run",
         "migration:revert": "node migration revert"
