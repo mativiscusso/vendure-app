@@ -29,12 +29,12 @@ const config = {
     },
     authOptions: {
         superadminCredentials: {
-            identifier: "superadmin",
-            password: "superadmin",
+            identifier: process.env.SUPERADMIN_USERNAME,
+            password: process.env.SUPERADMIN_PASSWORD,
         },
         tokenMethod: "cookie",
         cookieOptions: {
-            secret: "mipalabrasuperremilsecretaIAN",
+            secret: process.env.COOKIE_SESSION_SECRET,
         },
         requireVerification: true,
     },
@@ -42,11 +42,11 @@ const config = {
         type: "mysql",
         synchronize: true, // turn this off for production
         logging: false,
-        database: "vendureDev",
-        host: "aa18oj4ktbwqa7e.cldekbyx7m5c.us-east-1.rds.amazonaws.com",
-        port: 3306,
-        username: "ecommerce-vendure",
-        password: "ZuJR6nM!mNrTezk",
+        database: process.env.DB_NAME,
+        host: process.env.DB_HOST,
+        port: process.env.DB_PORT,
+        username: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
         migrations: [path.join(__dirname, "../migrations/*.ts")],
     },
     paymentOptions: {
@@ -69,10 +69,9 @@ const config = {
             globalTemplateVars: {
                 // The following variables will change depending on your storefront implementation
                 fromAddress: '"example" <noreply@example.com>',
-                verifyEmailAddressUrl: "http://localhost:3000/users/verify",
-                passwordResetUrl: "http://localhost:3000/users/password-reset",
-                changeEmailAddressUrl:
-                    "http://localhost:3000/users/verify-email-address-change",
+                verifyEmailAddressUrl: `${process.env.DOMAIN_URL}/users/verify`,
+                passwordResetUrl: `${process.env.DOMAIN_URL}/users/password-reset`,
+                changeEmailAddressUrl: `${process.env.DOMAIN_URL}/users/verify-email-address-change`,
             },
         }),
         AdminUiPlugin.init({
