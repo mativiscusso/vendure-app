@@ -2,5 +2,10 @@ node_modules
 dist
 static/assets
 static/email/test-emails
+<<<<<<< HEAD
 vendure-app.pem
 .env
+=======
+.env
+vendure-app.pem
+>>>>>>> parent of 527a51c (upgrade vendure)
