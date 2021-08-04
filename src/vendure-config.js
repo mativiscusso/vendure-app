@@ -18,14 +18,14 @@ const config = {
                 "request.credentials": "include",
             },
         }, // turn this off for production
-        adminApiDebug: true, // turn this off for production
+        adminApiDebug: false, // turn this off for production
         shopApiPath: "shop-api",
         shopApiPlayground: {
             settings: {
                 "request.credentials": "include",
             },
         }, // turn this off for production
-        shopApiDebug: true, // turn this off for production
+        shopApiDebug: false, // turn this off for production
     },
     authOptions: {
         superadminCredentials: {
@@ -40,7 +40,7 @@ const config = {
     },
     dbConnectionOptions: {
         type: "mysql",
-        synchronize: true, // turn this off for production
+        synchronize: false, // turn this off for production
         logging: false,
         database: process.env.DB_NAME,
         host: process.env.DB_HOST,
