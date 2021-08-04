@@ -29,7 +29,7 @@ const config = {
     },
     authOptions: {
         superadminCredentials: {
-            identifier: process.env.IDENTIFIER,
+            identifier: process.env.SUPERADMIN_IDENTIFIER,
             password: process.env.SUPERADMIN_PASSWORD,
         },
         tokenMethod: "cookie",
