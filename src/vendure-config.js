@@ -36,7 +36,7 @@ const config = {
         cookieOptions: {
             secret: process.env.COOKIE_SESSION_SECRET,
         },
-        requireVerification: true,
+        requireVerification: false,
     },
     dbConnectionOptions: {
         type: "mysql",
