@@ -28,7 +28,7 @@ const config = {
         shopApiDebug: false, // turn this off for production
         cors: {
             origin: process.env.DOMAIN_URL,
-            credentials: true,
+            exposedHeaders: ["Authorization"],
         },
     },
     authOptions: {
@@ -36,12 +36,7 @@ const config = {
             identifier: process.env.SUPERADMIN_IDENTIFIER,
             password: process.env.SUPERADMIN_PASSWORD,
         },
-        tokenMethod: "cookie",
-        cookieOptions: {
-            secret: process.env.COOKIE_SESSION_SECRET,
-            sameSite: "None",
-            secure: true,
-        },
+        tokenMethod: "bearer",
         requireVerification: false,
     },
     dbConnectionOptions: {
