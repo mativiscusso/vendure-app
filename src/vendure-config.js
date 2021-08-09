@@ -39,7 +39,8 @@ const config = {
         tokenMethod: "cookie",
         cookieOptions: {
             secret: process.env.COOKIE_SESSION_SECRET,
-            sameSite: "None",
+            sameSite: "none",
+            secure: true,
         },
         requireVerification: false,
     },
