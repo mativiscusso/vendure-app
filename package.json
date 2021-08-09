@@ -6,7 +6,7 @@
         "run:server": "node ./src/index.js",
         "run:worker": "node ./src/index-worker.js",
         "start": "concurrently yarn:run:*",
-        "start:prod": "pm2 start  node ./src/index.js && node ./src/index-worker.js ",
+        "start:prod": "pm2 start start-server.sh ",
         "stop:prod": "pm2 stop all",
         "migration:generate": "node migration generate",
         "migration:run": "node migration run",
