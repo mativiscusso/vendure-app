@@ -28,7 +28,8 @@ const config = {
         shopApiDebug: false, // turn this off for production
         cors: {
             origin: process.env.DOMAIN_URL,
-            exposedHeaders: ["Authorization"],
+            exposedHeaders: ["vendure-auth-token"],
+            credentials: true,
         },
     },
     authOptions: {
