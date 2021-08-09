@@ -26,6 +26,10 @@ const config = {
             },
         }, // turn this off for production
         shopApiDebug: false, // turn this off for production
+        cors: {
+            origin: process.env.DOMAIN_URL,
+            credentials: true,
+        },
     },
     authOptions: {
         superadminCredentials: {
@@ -35,7 +39,6 @@ const config = {
         tokenMethod: "cookie",
         cookieOptions: {
             secret: process.env.COOKIE_SESSION_SECRET,
-            SameSite: "Secure",
         },
         requireVerification: false,
     },
