@@ -26,6 +26,10 @@ const config = {
             },
         }, // turn this off for production
         shopApiDebug: false, // turn this off for production
+        cors: {
+            origin: process.env.DOMAIN_URL,
+            credentials: true,
+        },
     },
     authOptions: {
         superadminCredentials: {
